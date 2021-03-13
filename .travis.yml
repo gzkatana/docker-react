@@ -9,6 +9,10 @@ scripts:
   #- docker run gzkatana/docker-react npm run test -- --coverage
   - docker run -e CI=true gzkatana/docker-react npm run test
 
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push gzkatana/docker-react
+
 deploy:
   provider: elasticbeanstalk
   access_key_id: "AKIA5ECYDALW44GFTTMO"
