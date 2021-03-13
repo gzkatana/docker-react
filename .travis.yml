@@ -8,5 +8,14 @@ before_install:
 scripts:
   - docker run gzkatana/docker-react npm run test -- --coverage
 
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-west-3"
+  app: "docker-react"
+  env: "Dockerreact-env"
+  bucket_name: "elasticbeanstalk-eu-west-3-902127878893"
+  bucker_path: "docker-react"
+  on:
+    branch: master
+
   # good job
-  
