@@ -9,8 +9,6 @@ scripts:
   #- docker run gzkatana/docker-react npm run test -- --coverage
   - docker run -e CI=true gzkatana/docker-react npm run test
 
-
-
 deploy:
   provider: elasticbeanstalk
   region: "eu-west-3"
