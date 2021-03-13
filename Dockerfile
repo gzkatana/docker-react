@@ -10,4 +10,6 @@ RUN npm run build
 
 FROM nginx
 COPY --from=builder /usr/front/build /usr/share/nginx/html
-# no need to start nginx command , it will start automatically 
+# no need to start nginx command , it will start automatically
+# trying commit 
+ 
