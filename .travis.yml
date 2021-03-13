@@ -7,3 +7,6 @@ before_install:
 
 scripts:
   - docker run gzkatana/docker-react npm run test -- --coverage
+
+  # good job
+  
