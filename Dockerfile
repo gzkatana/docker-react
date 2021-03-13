@@ -1,6 +1,6 @@
 FROM node:alpine as builder
 WORKDIR /usr/front
-COPY package.json .
+COPY package*.json ./
 RUN npm install 
 COPY ./ ./
 RUN chmod 777 /usr/front/node_modules
