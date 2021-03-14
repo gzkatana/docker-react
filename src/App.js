@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Salam Aleikoum Let's Learn React
+          Salam Aleikoum Let's Learn React hala hala
         </a>
       </header>
     </div>

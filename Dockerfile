@@ -6,8 +6,6 @@ COPY ./ ./
 RUN chmod 777 /usr/front/node_modules
 RUN npm run build
 
-# all the file of the build will be in /usr/front/build
-
 FROM nginx
 EXPOSE 80
 COPY --from=builder /usr/front/build /usr/share/nginx/html
