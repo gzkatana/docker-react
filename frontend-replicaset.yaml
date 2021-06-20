@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myreplicaset
+  labels: 
+    app: mypod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: mypod
+  template:
+    metadata:
+      name: mypod
+      labels:
+        name: mypod
+    spec:
+      containers:
+      - name: frontend
+        image: gzkatana/frontend:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+          - containerPort: 3000

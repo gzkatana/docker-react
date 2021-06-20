@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  labels:
+    name: trialpod
+spec:
+  containers:
+  - name: frontend
+    image: gzkatana/frontend:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 3000

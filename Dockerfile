@@ -13,4 +13,3 @@ EXPOSE 80
 COPY --from=builder /usr/front/build /usr/share/nginx/html
 # no need to start nginx command , it will start automatically
 # trying commit 
- 
